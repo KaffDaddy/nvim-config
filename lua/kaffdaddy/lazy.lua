@@ -12,7 +12,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
-  { import = "kaffdaddy.plugins" },
+  {
+    { import = "kaffdaddy.plugins" },
+    { import = "kaffdaddy.plugins.lsp" },
+  },
   {
     install = {
       colorscheme = { "nightfly" }
