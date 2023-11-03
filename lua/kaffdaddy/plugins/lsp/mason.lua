@@ -42,6 +42,9 @@ return {
         "prettier", -- prettier formatter
         "stylua", -- lua formatter
         "eslint_d", -- js linter
+        "phpcs",
+        "phpmd",
+        "phpstan"
       },
     })
   end,
