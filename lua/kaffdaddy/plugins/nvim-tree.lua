@@ -14,7 +14,7 @@ return {
     require("nvim-tree").setup({
       sort_by = "case_sensitive",
       view = {
-        width = 30,
+        width = 40,
       },
       renderer = {
         group_empty = true,
@@ -25,7 +25,7 @@ return {
     })
 
     local keymap = vim.keymap
-    keymap.set("n", "<leader>eo", "<cmd>NvimTreeOpen<CR>", { desc = "Opens up file explorer" }) 
+    keymap.set("n", "<leader>eo", "<cmd>NvimTreeOpen<CR>", { desc = "Opens up file explorer" })
     keymap.set("n", "<leader>et", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
     keymap.set("n", "<leader>ecf", "<cmd>NvimTreeFindFile<CR>", { desc = "Toggle file explorer on current file" })
   end,

@@ -35,7 +35,6 @@ return {
           "vim",
           "dockerfile",
           "gitignore",
-          "phpactor",
         },
         incremental_selection = {
           enable = true,

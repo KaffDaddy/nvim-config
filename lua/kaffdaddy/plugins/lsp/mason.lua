@@ -44,7 +44,6 @@ return {
         "eslint_d", -- js linter
         "phpcs",
         "phpmd",
-        "phpstan"
       },
     })
   end,
