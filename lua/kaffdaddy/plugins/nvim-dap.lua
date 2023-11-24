@@ -42,9 +42,36 @@ return {
       cmd = { "DapInstall", "DapUninstall" },
       opts = {
         automatic_installation = true,
-        handlers = {},
-        ensure_installed = {
+        handlers = {
+          function(config)
+            -- all sources with no handler get passed here
+
+            -- Keep original functionality
+            require('mason-nvim-dap').default_setup(config)
+          end,
+          php = function(config)
+            config.adapters = {
+	            type = "executable",
+	            command = "node",
+              args = { '/Users/stephan/projects/vscode-php-debug/out/phpDebug.js' }
+            }
+            config.configurations = {
+              {
+                type = 'php',
+                request = 'launch',
+                name = "Listen for XDebug",
+                port = 9003,
+                log = false,
+                pathMappings = {
+                  ['/app/'] = vim.fn.getcwd() .. '/',
+                },
+                hostname = '0.0.0.0',
+              }
+            }
+            require('mason-nvim-dap').default_setup(config) -- don't forget this!
+        end,
         },
+        ensure_installed = {},
       },
     },
   },
