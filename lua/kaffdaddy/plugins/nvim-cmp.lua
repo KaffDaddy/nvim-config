@@ -22,7 +22,7 @@ return {
       completion = {
         completeopt = "menu,menuone,preview,noselect",
       },
-      snippet = { 
+      snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
         end,
