@@ -14,13 +14,17 @@ return {
     require("nvim-tree").setup({
       sort_by = "case_sensitive",
       view = {
+        adaptive_size = true,
         width = 40,
       },
       renderer = {
-        group_empty = true,
+        highlight_opened_files = "name",
+        group_empty = false,
+        symlink_destination = true,
       },
       filters = {
-        dotfiles = true,
+        dotfiles = false,
+        git_ignored = false,
       },
     })
 
