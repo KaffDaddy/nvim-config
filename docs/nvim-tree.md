@@ -9,6 +9,8 @@ Source: [https://github.com/nvim-tree/nvim-tree.luai](https://github.com/nvim-tr
 | \<leader\>eo | Opens up file explorer |
 | \<leader\>et | Toggle file explorer |
 | \<leader\>ecf |  Toggle file explorer on current file |
+| \<C-h\> | Set cursor to sidebar |
+| \<C-l\> | Set cursor to file in open buffer |
 | \<C-k\> | File info |
 | \<C-t\> | Open file in new tab |
 | \<C-v\> | Open (vertical split) |
