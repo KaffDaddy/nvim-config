@@ -9,4 +9,4 @@
 ## Plugin documentation
 
 * [Project explorer](docs/nvim-tree.md)
-
+* [Fuzzy finder](docs/telescope.md)
