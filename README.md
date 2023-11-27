@@ -8,10 +8,21 @@
 
 Leader key: ` ` (Space)
 
-### File tree (nvim-tree)
+## Key mapping
 
-| Shortcut       | Description                         |
-|----------------|-------------------------------------|
-| \<leader\>eo   | Open up file tree                   |
-| \<leader\>et   | Toggles file tree                   |
-| \<leader\>ecf  | Shows file in buffer in file tree   |
+### Search
+
+| Shortcut | Description |
+| --- | --- |
+| / | Search |
+| \<leader\>nh | Clear search highlights |
+
+### Tabs
+
+| Shortcut | Description |
+| --- | --- |
+| \<leader\>to | Open new tab |
+| \<leader\>tx | Close tab |
+| \<leader\>tn | Next tab |
+| \<leader\>tp | Previous tab |
+| \<leader\>tf | Open current buffer in new tab |
