@@ -6,6 +6,7 @@ return {
     filetype.setup({
       overrides = {
         extensions = {
+            html = "html",
             typoscript = "typoscript",
         }
       }
