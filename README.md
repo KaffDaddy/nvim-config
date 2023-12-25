@@ -26,3 +26,10 @@ Leader key: ` ` (Space)
 | \<leader\>tn | Next tab |
 | \<leader\>tp | Previous tab |
 | \<leader\>tf | Open current buffer in new tab |
+
+### Buffer
+
+| Shortcut | Description |
+| --- | --- |
+| :ls | Show list of buffers |
+| :b# | # for ID of buffer to switch to |

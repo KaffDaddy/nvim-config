@@ -26,6 +26,16 @@ return {
         "cssls",
         "lua_ls",
         "emmet_ls",
+        "phpactor",
+        "psalm",
+        "eslint",
+        "html",
+        "jsonls",
+        "autotools-language-server",
+        "marksman",
+        "sqlls",
+        "lemminx",
+        "yamlls"
       },
       automatic_installation = true,
     })
