@@ -31,11 +31,10 @@ return {
         "eslint",
         "html",
         "jsonls",
-        "autotools-language-server",
         "marksman",
         "sqlls",
         "lemminx",
-        "yamlls"
+        "yamlls",
       },
       automatic_installation = true,
     })

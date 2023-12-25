@@ -33,3 +33,5 @@ Leader key: ` ` (Space)
 | --- | --- |
 | :ls | Show list of buffers |
 | :b# | # for ID of buffer to switch to |
+| C-i | Go to the next buffer in jump list |
+| C-o | Go to the previous buffer in jump list |
