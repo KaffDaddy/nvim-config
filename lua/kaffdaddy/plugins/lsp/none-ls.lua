@@ -14,18 +14,18 @@ return {
 
     mason_null_ls.setup({
       ensure_installed = {
-        "prettier", -- prettier formatter
-        "stylua", -- lua formatter
-        "eslint_d", -- js linter
+        "prettier",
+        "stylua",
+        "eslint_d",
         "phpcs",
         "phpmd",
-        "phpstan"
+        "phpstan",
       },
     })
 
     -- for conciseness
-    local formatting = null_ls.builtins.formatting -- to setup formatters
-    local diagnostics = null_ls.builtins.diagnostics -- to setup linters
+    local formatting = null_ls.builtins.formatting
+    local diagnostics = null_ls.builtins.diagnostics
 
     -- to setup format on save
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})

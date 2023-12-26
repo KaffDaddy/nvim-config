@@ -65,7 +65,7 @@ return {
     -- configure PHP server
     lspconfig["phpactor"].setup({
       capabilities = capabilities,
-      on_attach = on_attach
+      on_attach = on_attach,
     })
 
     -- configure html server
@@ -110,6 +110,18 @@ return {
           },
         },
       },
+    })
+
+    -- configure psalm server
+    lspconfig["psalm"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    -- configure eslint server
+    lspconfig["eslint"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
     })
   end,
 }

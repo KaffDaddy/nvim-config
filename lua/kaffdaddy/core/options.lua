@@ -3,10 +3,11 @@ local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
 
-opt.tabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
+opt.textwidth = 120
 
 opt.wrap = false
 

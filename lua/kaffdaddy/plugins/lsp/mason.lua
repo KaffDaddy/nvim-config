@@ -46,6 +46,7 @@ return {
         "eslint_d",
         "phpcs",
         "phpmd",
+        "php-cs-fixer",
       },
     })
   end,
