@@ -1,0 +1,16 @@
+{
+  "filetype_details": {
+  }, 
+  "use_telescope": true, 
+  "filetypes": ["xml", "go", "lua", "js", "py", "sh", "html", "php", "css", "scss", "xml"], 
+  "localKeys": [{
+    "filenameContains": ["gp"], 
+    "LocalKeys": [{
+      "modes": ["n", "i", "v"],
+      "cmd": "<CMD>GpResponse<CR>",
+      "key": "<C-k>k"
+    }]
+  }], 
+  "scratch_file_dir": "~/.cache/nvim/scratch.nvim",
+  "window_cmd": "edit"
+}
