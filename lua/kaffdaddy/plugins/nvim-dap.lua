@@ -66,7 +66,7 @@ return {
             config.adapters = {
               type = "executable",
               command = "node",
-              args = { "~/projects/vscode-php-debug/out/phpDebug.js" },
+              args = { "/Users/stephan/projects/vscode-php-debug/out/phpDebug.js" },
             }
             config.configurations = {
               {
@@ -211,15 +211,15 @@ return {
   },
 
   config = function()
-    local Config = require("lazyvim.config")
+    -- local Config = require("lazy.config")
     vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
 
-    for name, sign in pairs(Config.icons.dap) do
-      sign = type(sign) == "table" and sign or { sign }
-      vim.fn.sign_define(
-        "Dap" .. name,
-        { text = sign[1], texthl = sign[2] or "DiagnosticInfo", linehl = sign[3], numhl = sign[3] }
-      )
-    end
+    -- for name, sign in pairs(Config.icons.dap) do
+    --  sign = type(sign) == "table" and sign or { sign }
+    --  vim.fn.sign_define(
+    --    "Dap" .. name,
+    --    { text = sign[1], texthl = sign[2] or "DiagnosticInfo", linehl = sign[3], numhl = sign[3] }
+    --  )
+    -- end
   end,
 }
