@@ -10,6 +10,7 @@ return {
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local keymap = vim.keymap
     local opts = { noremap = true, silent = true }
+
     local on_attach = function(client, bufnr)
       opts.buffer = bufnr
 
