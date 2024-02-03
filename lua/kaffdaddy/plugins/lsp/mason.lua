@@ -44,6 +44,7 @@ return {
         "prettier",
         "stylua",
         "eslint_d",
+        "phpcbf",
         "phpcs",
         "phpmd",
         "php-cs-fixer",
