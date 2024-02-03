@@ -1,7 +1,7 @@
 return {
   "nvim-tree/nvim-tree.lua",
   dependencies = {
-    "nvim-tree/nvim-web-devicons"
+    "nvim-tree/nvim-web-devicons",
   },
   config = function()
     -- disable netrw at the very start of your init.lua
@@ -14,18 +14,23 @@ return {
     require("nvim-tree").setup({
       sort_by = "case_sensitive",
       view = {
-        width = 30,
+        adaptive_size = false,
+        preserve_window_proportions = true,
+        width = 40,
       },
       renderer = {
-        group_empty = true,
+        highlight_opened_files = "name",
+        group_empty = false,
+        symlink_destination = true,
       },
       filters = {
-        dotfiles = true,
+        dotfiles = false,
+        git_ignored = false,
       },
     })
 
     local keymap = vim.keymap
-    keymap.set("n", "<leader>eo", "<cmd>NvimTreeOpen<CR>", { desc = "Opens up file explorer" }) 
+    keymap.set("n", "<leader>eo", "<cmd>NvimTreeOpen<CR>", { desc = "Opens up file explorer" })
     keymap.set("n", "<leader>et", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
     keymap.set("n", "<leader>ecf", "<cmd>NvimTreeFindFile<CR>", { desc = "Toggle file explorer on current file" })
   end,
