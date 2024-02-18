@@ -1,12 +1,18 @@
 local opt = vim.opt
 
+opt.mouse = "a"
+
 opt.number = true
 opt.relativenumber = true
+opt.scrolloff = 8
 
 opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
+
+opt.smartindent = true
+opt.breakindent = true
 
 opt.wrap = false
 
@@ -25,5 +31,6 @@ opt.clipboard:append("unnamedplus")
 
 opt.splitright = true
 opt.splitbelow = true
+opt.colorcolumn = "80"
 
 opt.swapfile = false
