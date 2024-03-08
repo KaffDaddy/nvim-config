@@ -40,11 +40,11 @@ return {
         }),
         formatting.stylua,
         formatting.phpcbf,
-        diagnostics.eslint_d.with({
-          condition = function(utils)
-            return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" })
-          end,
-        }),
+        -- diagnostics.eslint_d.with({
+        --   condition = function(utils)
+        --     return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" })
+        --   end,
+        -- }),
       },
       on_attach = function(current_client, bufnr)
         local function is_null_ls_formatting_enabled(buffernr)
