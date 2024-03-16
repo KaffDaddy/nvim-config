@@ -68,9 +68,6 @@ return {
         automatic_installation = true,
         handlers = {
           function(config)
-            -- all sources with no handler get passed here
-
-            -- Keep original functionality
             require("mason-nvim-dap").default_setup(config)
           end,
           php = function(config)
@@ -87,12 +84,14 @@ return {
                 port = 9003,
                 log = false,
                 pathMappings = {
+                  -- Path in docker container => path from project root
                   ["/app/"] = vim.fn.getcwd() .. "/",
+                  -- ["/app/"] = vim.fn.getcwd() .. "/app/local/",
                 },
                 hostname = "0.0.0.0",
               },
             }
-            require("mason-nvim-dap").default_setup(config) -- don't forget this!
+            require("mason-nvim-dap").default_setup(config)
           end,
         },
         ensure_installed = {},
