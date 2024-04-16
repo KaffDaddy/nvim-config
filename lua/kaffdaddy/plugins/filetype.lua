@@ -1,5 +1,6 @@
 return {
   "nathom/filetype.nvim",
+  event = "VeryLazy",
   config = function()
     local filetype = require("filetype")
 
