@@ -31,6 +31,6 @@ opt.clipboard:append("unnamedplus")
 
 opt.splitright = true
 opt.splitbelow = true
-opt.colorcolumn = "80"
+opt.colorcolumn = "120"
 
 opt.swapfile = false
