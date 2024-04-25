@@ -2,7 +2,7 @@
   "filetype_details": {
   }, 
   "use_telescope": true, 
-  "filetypes": ["xml", "go", "lua", "js", "py", "sh", "html", "php", "css", "scss", "xml"], 
+  "filetypes": ["xml", "go", "lua", "js", "py", "sh", "html", "php", "css", "scss", "xml", "txt", "md"], 
   "localKeys": [{
     "filenameContains": ["gp"], 
     "LocalKeys": [{

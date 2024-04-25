@@ -40,11 +40,11 @@ return {
         }),
         formatting.stylua,
         formatting.phpcbf,
-        diagnostics.eslint_d.with({
-          condition = function(utils)
-            return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" })
-          end,
-        }),
+        -- diagnostics.eslint_d.with({
+        --   condition = function(utils)
+        --     return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" })
+        --   end,
+        -- }),
       },
       on_attach = function(current_client, bufnr)
         local function is_null_ls_formatting_enabled(buffernr)
@@ -61,7 +61,7 @@ return {
           then
             vim.bo[bufnr].formatexpr = "v:lua.vim.lsp.formatexpr()"
             opts.desc = "Format code"
-            vim.keymap.set("n", "<leader>gq", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opts)
+            vim.keymap.set("n", "<leader>cf", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opts)
           else
             vim.bo[bufnr].formatexpr = nil
           end
