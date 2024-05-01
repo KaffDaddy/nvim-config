@@ -63,32 +63,62 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
+    local border = {
+        { '┌', 'FloatBorder' },
+        { '─', 'FloatBorder' },
+        { '┐', 'FloatBorder' },
+        { '│', 'FloatBorder' },
+        { '┘', 'FloatBorder' },
+        { '─', 'FloatBorder' },
+        { '└', 'FloatBorder' },
+        { '│', 'FloatBorder' },
+    }
+
+    -- Add the border on hover and on signature help popup window
+    local handlers = {
+        ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
+        ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
+    }
+
+    -- Add border to the diagnostic popup window
+    vim.diagnostic.config({
+        virtual_text = {
+            prefix = '■ ', -- Could be '●', '▎', 'x', '■', , 
+        },
+        float = { border = border },
+    })
+
     -- configure PHP server
     lspconfig["phpactor"].setup({
+      handlers = handlers,
       capabilities = capabilities,
       on_attach = on_attach,
     })
 
     -- configure html server
     lspconfig["html"].setup({
+      handlers = handlers,
       capabilities = capabilities,
       on_attach = on_attach,
     })
 
     -- configure typescript server with plugin
     lspconfig["tsserver"].setup({
+      handlers = handlers,
       capabilities = capabilities,
       on_attach = on_attach,
     })
 
     -- configure css server
     lspconfig["cssls"].setup({
+      handlers = handlers,
       capabilities = capabilities,
       on_attach = on_attach,
     })
 
     -- configure emmet language server
     lspconfig["emmet_ls"].setup({
+      handlers = handlers,
       capabilities = capabilities,
       on_attach = on_attach,
       filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less" },
@@ -96,6 +126,7 @@ return {
 
     -- configure lua server
     lspconfig["lua_ls"].setup({
+      handlers = handlers,
       capabilities = capabilities,
       on_attach = on_attach,
       settings = {
@@ -115,12 +146,14 @@ return {
 
     -- configure psalm server
     lspconfig["psalm"].setup({
+      handlers = handlers,
       capabilities = capabilities,
       on_attach = on_attach,
     })
 
     -- configure eslint server
     lspconfig["eslint"].setup({
+      handlers = handlers,
       capabilities = capabilities,
       on_attach = on_attach,
     })
