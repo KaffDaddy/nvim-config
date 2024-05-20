@@ -49,6 +49,10 @@ return {
           ellipsis_char = "...",
         }),
       },
+      window = {
+        completion = { border = 'single' },
+        documentation = { border = 'single' },
+      },
     })
   end,
 }
