@@ -1,4 +1,4 @@
--- require("kaffdaddy.core.autocmds")
+require("kaffdaddy.core.autocmds")
 require("kaffdaddy.core.filetype")
 require("kaffdaddy.core.global")
 require("kaffdaddy.core.keymaps")
